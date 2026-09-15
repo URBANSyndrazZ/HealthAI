@@ -1,0 +1,9 @@
+services:
+  backend:
+    build:
+      args:
+        INSTALL_ML_DEPS: "true"
+        TORCH_INDEX_URL: https://download.pytorch.org/whl/cpu
+    environment:
+      RAG_EMBEDDING_MODEL: bge-m3
+      RAG_USE_RERANKER: "false"

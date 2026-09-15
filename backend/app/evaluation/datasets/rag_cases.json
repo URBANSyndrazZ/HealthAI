@@ -1,0 +1,95 @@
+[
+  {
+    "id": "rag_physical_activity_guideline",
+    "query": "成年人建议多大的身体活动量？",
+    "tags": ["rag", "exercise"],
+    "reference_response": "成年人通常建议每周进行150-300分钟中等强度有氧身体活动，或75-150分钟高强度有氧身体活动，并每周至少2天进行肌肉力量训练。可结合自身基础分散到多天完成。",
+    "retrieved_docs": [
+      {
+        "id": "physical_activity_guideline_001",
+        "title": "成年人身体活动建议",
+        "content": "成年人每周至少进行150-300分钟中等强度有氧身体活动，或75-150分钟高强度有氧身体活动，并应每周至少2天进行肌肉力量训练。",
+        "source": "health guideline",
+        "metadata": {
+          "topic": "physical_activity",
+          "category": "exercise"
+        }
+      },
+      {
+        "id": "sleep_guideline_001",
+        "title": "成年人睡眠建议",
+        "content": "成年人通常建议每晚保持7-9小时睡眠。",
+        "source": "health guideline",
+        "metadata": {
+          "topic": "sleep",
+          "category": "lifestyle"
+        }
+      }
+    ],
+    "expected": {
+      "intent": "exercise",
+      "urgent": false,
+      "prompt_injection": false,
+      "task_agents": ["exercise"],
+      "memory_scope": "rag_only",
+      "needs_rag": true,
+      "rag_doc_ids": ["physical_activity_guideline_001"],
+      "rag_topics": ["physical_activity"],
+      "rag_context_terms": ["150-300分钟", "力量训练"]
+    }
+  },
+  {
+    "id": "rag_hypertension_lifestyle",
+    "query": "高血压的人生活方式上需要注意什么？",
+    "tags": ["rag", "hypertension"],
+    "reference_response": "高血压人群生活方式上应注意低盐饮食、规律运动、控制体重、限制饮酒、保持良好睡眠，并按医嘱监测血压。若血压持续异常，应及时就医。",
+    "retrieved_docs": [
+      {
+        "id": "hypertension_lifestyle_001",
+        "title": "高血压生活方式干预",
+        "content": "高血压人群应关注低盐饮食、规律运动、控制体重、限制饮酒、保持良好睡眠，并按医嘱监测血压。",
+        "source": "hypertension guideline",
+        "metadata": {
+          "topic": "hypertension",
+          "category": "chronic_disease"
+        }
+      }
+    ],
+    "expected": {
+      "intent": "general_health",
+      "urgent": false,
+      "prompt_injection": false,
+      "task_agents": [],
+      "rag_doc_ids": ["hypertension_lifestyle_001"],
+      "rag_topics": ["hypertension"],
+      "rag_context_terms": ["低盐", "监测血压"]
+    }
+  },
+  {
+    "id": "rag_sleep_guideline",
+    "query": "成年人一般建议睡多久？",
+    "tags": ["rag", "sleep"],
+    "reference_response": "成年人一般建议每晚睡7-9小时，并尽量保持稳定作息。如果长期睡眠不足或白天功能受影响，建议进一步咨询医生或睡眠门诊。",
+    "retrieved_docs": [
+      {
+        "id": "sleep_guideline_001",
+        "title": "成年人睡眠建议",
+        "content": "成年人通常建议每晚保持7-9小时睡眠，并尽量维持稳定作息。",
+        "source": "sleep guideline",
+        "metadata": {
+          "topic": "sleep",
+          "category": "lifestyle"
+        }
+      }
+    ],
+    "expected": {
+      "intent": "lifestyle",
+      "urgent": false,
+      "prompt_injection": false,
+      "task_agents": [],
+      "rag_doc_ids": ["sleep_guideline_001"],
+      "rag_topics": ["sleep"],
+      "rag_context_terms": ["7-9小时", "稳定作息"]
+    }
+  }
+]

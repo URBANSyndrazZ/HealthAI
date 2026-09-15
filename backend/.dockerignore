@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.sample
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.deepeval/
+.venv/
+venv/
+.data/
+data/
+*.log

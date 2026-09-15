@@ -1,0 +1,53 @@
+[
+  {
+    "id": "routing_nutrition",
+    "query": "今天午餐吃了炸鸡、米饭和奶茶，帮我分析一下饮食是否健康。",
+    "tags": ["routing", "nutrition"],
+    "expected": {
+      "intent": "nutrition",
+      "urgent": false,
+      "prompt_injection": false,
+      "task_agents": ["nutrition"]
+    }
+  },
+  {
+    "id": "routing_environment_exercise",
+    "query": "杭州今天空气怎么样？我想户外跑步30分钟合适吗？",
+    "profile": {
+      "exercise": {
+        "fitness_level": "beginner"
+      }
+    },
+    "tags": ["routing", "environment", "exercise"],
+    "expected": {
+      "intent": "exercise",
+      "urgent": false,
+      "prompt_injection": false,
+      "task_agents": ["environment", "exercise"]
+    }
+  },
+  {
+    "id": "routing_exercise_only",
+    "query": "我想做30分钟居家力量训练，帮我安排一下。",
+    "tags": ["routing", "exercise"],
+    "expected": {
+      "intent": "exercise",
+      "urgent": false,
+      "prompt_injection": false,
+      "task_agents": ["exercise"]
+    }
+  },
+  {
+    "id": "routing_rag_only",
+    "query": "成年人建议多大的身体活动量？",
+    "tags": ["routing", "rag"],
+    "expected": {
+      "intent": "exercise",
+      "urgent": false,
+      "prompt_injection": false,
+      "task_agents": ["exercise"],
+      "memory_scope": "rag_only",
+      "needs_rag": true
+    }
+  }
+]

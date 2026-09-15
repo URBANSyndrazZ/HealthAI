@@ -1,0 +1,15 @@
+{
+  "name": "ai-health-assistant",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/start-dev.mjs",
+    "start": "npm run dev",
+    "dev:backend": "node scripts/start-dev.mjs --backend-only",
+    "dev:frontend": "node scripts/start-dev.mjs --frontend-only",
+    "docker:up": "node scripts/start-docker.mjs",
+    "docker:down": "docker compose down"
+  },
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

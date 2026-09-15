@@ -1,0 +1,67 @@
+:root {
+  --brand-primary: #1677ff;
+  --brand-primary-dark: #0958d9;
+  --brand-primary-soft: #e6f4ff;
+  --brand-accent: #69b1ff;
+  --surface-primary: rgba(255, 255, 255, 0.92);
+  --surface-secondary: rgba(255, 255, 255, 0.72);
+  --surface-strong: #ffffff;
+  --border-soft: rgba(22, 119, 255, 0.14);
+  --border-strong: rgba(22, 119, 255, 0.2);
+  --text-primary: #17324d;
+  --text-secondary: #5d7693;
+  --text-tertiary: #8ea3b9;
+  --success-soft: #f6ffed;
+  --success-text: #389e0d;
+  --warning-soft: #fffbe6;
+  --warning-text: #d48806;
+  --danger-soft: #fff1f0;
+  --danger-text: #cf1322;
+  --shadow-soft: 0 14px 40px rgba(22, 119, 255, 0.08);
+  --shadow-card: 0 10px 30px rgba(22, 119, 255, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--brand-primary);
+  --el-button-border-color: var(--brand-primary);
+  --el-button-hover-bg-color: var(--brand-primary-dark);
+  --el-button-hover-border-color: var(--brand-primary-dark);
+  --el-button-active-bg-color: var(--brand-primary-dark);
+  --el-button-active-border-color: var(--brand-primary-dark);
+}
+
+.el-tabs--border-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.el-tabs--border-card > .el-tabs__content {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.el-card {
+  border-color: var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
